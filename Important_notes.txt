@@ -1,0 +1,66 @@
+Important Note 1:
+
+How are words converted to continous vector representation or token-embeddings that are fed into an LLM.
+
+As part of the input processing pipelines, input text is first broken up into individual tokens. These Tokens are then
+converted into token IDs using a vocabulary. The token IDs are converted into embedding vectors
+to which positional embeddings of a similar size are added, resulting in input embedding that are used as input for the
+LLM layers.
+
+
+Important Note 2:
+Byte Pair Encoding tokenizer used for LLMs like GPT-2 and GPT-3 can efficiently handle unknown words by breaking them
+down into subword units or individual characters.
+
+Important Notes 3:
+
+4 types of attention mechanisms:
+1. Simplified self-attention: A simplified self-attention technique.
+2. Self-Attention: Self-Attention with trainable weights that forms the basis of the mechanism used in
+LLMs.
+3. Casual attention: A type of self-attention used in LLMs that allows a model to consider only previous and current inputs
+in a sequence, ensuring temporal order during the text generation.
+4. Multi-Head attention: An extension of self-attention and casual attention that enables the model to simultaneously attend to information
+from different representation subspaces.
+
+
+Important Note 4:
+Since we cant translate a text word by word due to the grammatical structures in the source and target language, we address
+the issue we use a deep neural network with two submodules,
+
+encoder: First read in and process the entire text,
+decoder: Produces the translated text.
+
+Important Note 5:
+Recurrent Neural Network: type of neural network  where outputs from previous steps are fed as inputs to the current step,
+making them well suited for sequential data like text.
+
+Important Note 6:
+One major shortcoming of RNN is it must remember the entire encoded input in a single hidden state before passing it to the
+decoder.
+
+Important Note 7:
+Bahdanau attention mechanism: Modifies the encoder-decoder RNN sich that the decoder can selectively access different parts of the input
+sequence at each decoding step. Using an attention mechanism, the text-generating decoder part of the network can access all
+input tokens selections. This means that some input tokens are more important than others for generating a given output token.
+The importance is determined by the so called attention weights.
+
+Important Note 8:
+
+
+Self attention is a mechanism in transformers that is used to compute more efficient input representations by allowing each
+position in a sequence to interact with and weigh the importance of all other positions within the same sequence.
+                        input text
+       Token embedding ->    |
+                        preprocessing steps
+                             |
+                        self attention model
+                             |
+                        PostProcessing steps
+                             |
+                        Input Text
+
+       Self Attention serrves as the cornerstone of every LLM based on the transformer architecture.
+       It's worth noting that this topic may require a lot of focus and attention (No Pun intented!)
+       but once you grasp it's fundamentals, you will have conquered one of the toughest aspects of the
+       book and implementing LLMs in general.
