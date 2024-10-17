@@ -1,0 +1,10 @@
+           Self Attention serrves as the cornerstone of every LLM based on the transformer architecture.
+           It's worth noting that this topic may require a lot of focus and attention (No Pun intented!)
+           but once you grasp it's fundamentals, you will have conquered one of the toughest aspects of the
+           book and implementing LLMs in general.
+
+           Self <- the mechanism's ability to compute attention weights by relating different positions within a single input
+           sequence.
+
+
+
