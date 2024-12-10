@@ -64,3 +64,12 @@ position in a sequence to interact with and weigh the importance of all other po
        It's worth noting that this topic may require a lot of focus and attention (No Pun intented!)
        but once you grasp it's fundamentals, you will have conquered one of the toughest aspects of the
        book and implementing LLMs in general.
+
+
+One way to obtain the masked attention weight matrix in causal attention is to apply the softmax function to the attention scores
+and zeroing out the elements above the diagonal and normalizing the resulting matrix.
+
+Attention scores -Apply softmax-> Attention weights -Mask with 0's above the diagonal -> Masked attention scores -Normalize rows-> Masked attention weights
+   unnormalized                      normalized                                               unnormalized                                 normalized
+
+

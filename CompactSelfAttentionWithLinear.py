@@ -30,6 +30,6 @@ class SelfAttention_v2(nn.Module):
         return context_vector 
 
 
-torch.manual_seed(789)
-sa_v2 = SelfAttention_v2(d_in=3, d_out=2)
-print(sa_v2(inputs))
+# torch.manual_seed(789)
+# sa_v2 = SelfAttention_v2(d_in=3, d_out=2)
+# print(sa_v2(inputs))

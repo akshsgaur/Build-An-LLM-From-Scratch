@@ -35,9 +35,9 @@ class SelfAttention_v2(nn.Module):
         self.W_key = nn.Linear(d_in, d_out, bias=qkv_bias)
         self.W_query = nn.Linear(d_in, d_out, bias=qkv_bias)
         self.W_value = nn.Linear(d_in, d_out, bias=qkv_bias)
-        print(self.W_key.weight)
-        print(self.W_query.weight)
-        print(self.W_value.weight)
+        # print(self.W_key.weight)
+        # print(self.W_query.weight)
+        # print(self.W_value.weight)
 
     def forward(self, x): 
         
@@ -57,8 +57,8 @@ sa_v1.W_query.data = sa_v2.W_query.weight.data.T
 sa_v1.W_key.data = sa_v2.W_key.weight.data.T
 sa_v1.W_value.data = sa_v2.W_value.weight.data.T
 
-print(sa_v1(inputs))
-print(sa_v2(inputs).T)
+#print(sa_v1(inputs))
+#print(sa_v2(inputs).T)
 
 
 

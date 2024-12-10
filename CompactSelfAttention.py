@@ -31,5 +31,5 @@ class SelfAttention_v1(nn.Module):
 
 torch.manual_seed(123)
 sa_v1 = SelfAttention_v1(d_in=3, d_out=2)
-print(sa_v1(inputs))
+#print(sa_v1(inputs))
     
