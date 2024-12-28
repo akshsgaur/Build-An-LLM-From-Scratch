@@ -34,7 +34,9 @@ Dataset and DataLoader implementations
 
 
 🔍 Core Components
+
 Attention Mechanisms
+
 The repository implements different types of attention mechanisms, each serving specific purposes in language modeling:
 
 CompactSelfAttention.py: Basic self-attention implementation
@@ -45,13 +47,18 @@ CausalAttentionMechanism.py: Implementation of causal attention for text generat
 
 
 Tokenization
+
 SimpleTokenizerV1.py: Basic tokenizer implementation
+
 tokenizing.py: Text tokenization utilities
+
 Integration with tiktoken for BPE tokenization
 
 
 Embeddings
+
 embedding.py: Token embedding implementation
+
 positionalencoding.py: Positional encoding for transformer models
 
 
