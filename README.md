@@ -3,16 +3,20 @@ This repository provides a comprehensive implementation of core components neede
 🌟 Key Features
 
 Implementation of various attention mechanisms:
+
 Simplified self-attention
 Standard self-attention with trainable weights
 Causal attention for sequential text generation
 Multi-head attention
+
 Tokenization utilities:
 Simple tokenizer implementations
 Integration with tiktoken (GPT-2 tokenizer)
+
 Embedding layers:
 Token embeddings
 Positional encodings
+
 Data processing:
 Sliding window implementation for text processing
 Batch processing utilities
